@@ -1,7 +1,7 @@
 # Get the private key from the environment variable
 echo "Setting up Production Connection..."
 mkdir -p keys  # Create keys directory if it doesn't exist
-echo $SFDC_SERVER_KEY | base64 --decode > keys/server.key
+echo "$SFDC_SERVER_KEY" | base64 --decode > keys/server.key
 chmod 600 keys/server.key
 
 # Authenticate to salesforce
