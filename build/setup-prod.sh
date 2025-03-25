@@ -6,17 +6,16 @@ echo "SFDC_SERVER_KEY"
 echo "SFDC_SERVER_KEY length: ${#SFDC_SERVER_KEY}"
 echo "$SFDC_SERVER_KEY" > keys/raw_key.txt
 cat -A keys/raw_key.txt
-echo "SFDC_SERVER_KEY1"
+echo "$SFDC_SERVER_KEY" | grep -q $'\r' && echo "CRLF detected!" || echo "No CRLF."
 
-echo "$SFDC_SERVER_KEY" | xxd  # Check for hidden characters
-echo "SFDC_SERVER_KEY2"
+echo "SFDC_SERVER_KEY1"
 
 echo "$SFDC_SERVER_KEY" | tr -d '\r' > keys/raw_key.txt
 echo "SFDC_SERVER_KEY3"
 
 # Alternative decoding methods for debugging
 echo "$SFDC_SERVER_KEY" | tr -d '\n' | base64 --decode > keys/server.key
-echo "SFDC_SERVER_KEY4"
+echo "SFDC_SERVER_KEY5"
 
 printf "%s" "$SFDC_SERVER_KEY" | base64 --decode > keys/server.key
 
