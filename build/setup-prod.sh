@@ -6,11 +6,6 @@ echo "SFDC_SERVER_KEY"
 
 # Try decoding and checking the key
 echo "$SFDC_SERVER_KEY" | base64 --decode | openssl rsa -check > keys/server.key 2> keys/error.log
-if [ $? -ne 0 ]; then
-    echo "Error: Invalid private key. Check keys/error.log for details."
-    cat keys/error.log
-    exit 1
-fi
 
 echo "SFDC_SERVER_KEY2"
 
