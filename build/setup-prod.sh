@@ -4,7 +4,8 @@ mkdir -p keys  # Create keys directory if it doesn't exist
 
 echo "SFDC_SERVER_KEY"
 echo "SFDC_SERVER_KEY length: ${#SFDC_SERVER_KEY}"
-
+echo "$SFDC_SERVER_KEY" > keys/raw_key.txt
+cat -A keys/raw_key.txt
 
 # Alternative decoding methods for debugging
 echo "$SFDC_SERVER_KEY" | tr -d '\n' | base64 --decode > keys/server.key
