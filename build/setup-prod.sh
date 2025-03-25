@@ -4,5 +4,6 @@ echo "server key test1 : $SFDC_SERVER_KEY"
 mkdir -p keys
 chmod +w keys
 echo $SFDC_SERVER_KEY > keys/servernew.key
-sfdx force:auth:jwt:grant -i "$SFDC_PROD_CLIENTID" -f keys/server.key -o "$SFDC_PROD_USER" --set-default-dev-hub -a devhub3
+# sfdx force:auth:jwt:grant -i "$SFDC_PROD_CLIENTID" -f keys/server.key -o "$SFDC_PROD_USER" --set-default-dev-hub -a devhub3
+sfdx force:auth:jwt:grant -i "$SFDC_PROD_CLIENTID" -f keys/servernew.key -o "$SFDC_PROD_USER" --set-default -a prodOrg
 echo "Authentication successful!"
