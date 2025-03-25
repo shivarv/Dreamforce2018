@@ -6,9 +6,10 @@
  * @last modified by  : Shiva Rajendran Viji
 **/
 @isTest
-public with sharing class HelloWorldTest {
+public class HelloWorldTest {
     @isTest
-    public static void testSample() {
+    private static void testSample() {
         HelloWorld.hello();
+        System.assert(true);
     }
 }
