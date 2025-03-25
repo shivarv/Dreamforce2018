@@ -1,7 +1,6 @@
 echo "Client ID: $SFDC_PROD_CLIENTID"
 echo "Username: $SFDC_PROD_USER"
 echo "server key test : $SFDC_SERVER_KEY"
-echo "Key Path: '${SFDC_SERVER_KEY}'"
 mkdir -p keys
 chmod +w keys
 echo $SFDC_SERVER_KEY > keys/servernew.key
