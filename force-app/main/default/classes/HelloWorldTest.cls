@@ -1,28 +1,14 @@
 /**
- * @description <description>
- *
- * @author OVO Energy <mw>
- * @date 08/2018
- */
+ * @description       : 
+ * @author            : Shiva Rajendran Viji
+ * @group             : 
+ * @last modified on  : 03-26-2025
+ * @last modified by  : Shiva Rajendran Viji
+**/
 @isTest
-public class HelloWorldTest {
-
-    /**
-     * <description>
-     *
-     * @param <param>       <description>
-     *
-     * @return <return>     <description>
-     *
-     */
-    static testMethod void HelloWorldTest() {
-
-        Test.startTest();
-        //this is a change
+public with sharing class HelloWorldTest {
+    @isTest
+    public static void testSample() {
         HelloWorld.hello();
-
-        Test.stopTest();
-
     }
-
 }
