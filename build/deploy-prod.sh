@@ -17,4 +17,4 @@ ls -la deploy_prod
 
 # Deploy to production & run all tests
 echo "Deploying to production & running all tests..."
-sfdx project deploy start --target-org $SFDC_PROD_USER --metadata-dir deploy_prod --test-level RunLocalTests  --wait 25
+sfdx project deploy start --target-org prodOrg --metadata-dir deploy_prod --test-level RunLocalTests  --wait 25
