@@ -3,11 +3,8 @@ echo "Setting up Production Connection..."
 mkdir -p keys  # Create keys directory if it doesn't exist
 
 echo "SFDC_SERVER_KEY"
+echo "SFDC_SERVER_KEY length: ${#SFDC_SERVER_KEY}"
 
-# Try decoding and checking the key
-echo "$SFDC_SERVER_KEY" | base64 --decode | openssl rsa -check > keys/server.key 2> keys/error.log
-
-echo "SFDC_SERVER_KEY2"
 
 # Alternative decoding methods for debugging
 echo "$SFDC_SERVER_KEY" | tr -d '\n' | base64 --decode > keys/server.key
