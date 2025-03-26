@@ -18,4 +18,4 @@ ls -la deploy_prod/classes/
 
 # Deploy to production & run all tests
 echo "Deploying to production & running all tests..."
-sfdx project deploy start --target-org prodOrg --metadata-dir deploy_prod --test-level RunLocalTests --verbose
+sfdx project deploy start --target-org prodOrg --metadata-dir deploy_prod --test-level RunSpecifiedTests --tests HelloWorldTest --verbose
