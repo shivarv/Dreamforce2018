@@ -15,7 +15,7 @@ public class HelloWorldTest {
 
     @isTest
     private static void testSampleAdd() {
-        integer output = HelloWorld.add(2, 3);
+        integer output = HelloWorld.addNumb(2, 3);
         System.assertEquals(5, output);
     }
 }
