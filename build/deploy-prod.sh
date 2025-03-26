@@ -14,6 +14,7 @@ chmod -R 755 deploy_prod
 # Verify that the conversion was successful
 echo "Checking contents of deploy_prod..."
 ls -la deploy_prod
+ls -la deploy_prod/classes/
 
 # Deploy to production & run all tests
 echo "Deploying to production & running all tests..."
