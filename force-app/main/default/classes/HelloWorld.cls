@@ -12,7 +12,7 @@ public class HelloWorld {
 
     }
 
-    public integer void add(integer a, integer b) {
+    public integer add(integer a, integer b) {
         return a + b;
 
     }
