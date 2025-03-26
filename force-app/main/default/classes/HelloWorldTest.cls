@@ -12,4 +12,10 @@ public class HelloWorldTest {
         HelloWorld.hello();
         System.assert(true);
     }
+
+    @isTest
+    private static void testSample() {
+        integer output = HelloWorld.add(2, 3);
+        System.assertEquals(5, output);
+    }
 }

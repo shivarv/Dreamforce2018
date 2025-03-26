@@ -1,3 +1,4 @@
 {
-  "target-dev-hub": "devhub3"
+  "target-dev-hub": "devhub3",
+  "org-capitalize-record-types": "true"
 }
